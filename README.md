@@ -1,5 +1,5 @@
 ## Dual-Port RAM in Verilog
-![Block Diagram](dual_port_ram_diagram.png
+![Block Diagram]([[dual_port_ram_diagram.png_](https://github.com/Shubhamyadav65381/Dual_port_Ram/blob/main/output%20waveform.png?raw=true](https://github.com/Shubhamyadav65381/Dual_port_Ram/blob/main/RTL.png?raw=true)))
 
 ## Table of Contents
 Project Overview
