@@ -1,66 +1,113 @@
 ## Dual-Port RAM in Verilog
-## Project Overview
+![Block Diagram](dual_port_ram_diagram.png
 
-This project implements a Dual-Port RAM in Verilog, enabling simultaneous read and write operations on two independent ports. The design supports parameterizable data width, address width, and memory depth, making it flexible for a wide range of digital system applications.
+## Table of Contents
+Project Overview
+
+- Key Features
+
+- Visual Overview
+
+- Technical Details
+
+- Usage Instructions
+
+- Project Structure
+
+- Example Operation
+
+- Benefits
+
+- Contributing
+
+- License
+
+- Author & Contact
+
+## Project Overview
+This project implements a Dual-Port RAM module in Verilog, allowing for simultaneous read and write operations on two independent ports. The design is parameterizable for data width, address width, and memory depth, making it suitable for a wide range of digital systems.
 
 ## Key Features
+- Fully parameterized dual-port RAM design
 
-Implementation of a parameterized dual-port RAM.
+Two independent ports:
 
-## Two independent ports:
+- **Port 0:** Read and Write support
 
-- Port 0: Supports both read and write.
+- **Port 1:** Read-only support
 
-- Port 1: Supports read-only.
+Synchronous write operation (positive clock edge)
 
-Synchronous write operation triggered on the positive clock edge.
+Tri-state outputs when ports are disabled
 
-Tri-state outputs when ports are disabled.
+Developed in Verilog HDL along with a complete testbench for verification
 
-Designed in Verilog HDL with a testbench for functional verification.
+## Visual Overview
+![RAM Architecture]( architecture of the dual-port RAM*
 
 ## Technical Details
+**Technology:** Verilog HDL
 
-## Technology: Verilog HDL
+**Target Device:** FPGA (synthesis-ready, device-agnostic)
 
-## Target Device: FPGA (generic, synthesis-ready)
+**Simulation:** Functional verification using a Verilog testbench
 
-## Simulation: Verified using a Verilog testbench.
+Synthesis Tools Supported: Xilinx Vivado, ModelSim, Icarus Verilog
 
-## Synthesis: Compatible with tools like Xilinx Vivado, ModelSim, or Icarus Verilog.
+## Usage Instructions
+- Compile
 
-## Usage
+bash
+- iverilog dual_port_ram.v test_bench.v -o ram_tb
+- Run the Testbench
 
-Compile both dual_port_ram.v and test_bench.v using your Verilog simulator (e.g., Icarus Verilog, ModelSim).
+bash
+- vvp ram_tb
+- Verify Results
 
-Run the testbench to verify read/write operations.
+- Check simulation waveforms 
 
-Observe waveforms or console output to confirm correct memory behavior.
+- Review console output for correct read/write operation
 
-For FPGA deployment, include the module in your project and connect it to appropriate logic.
+## FPGA Deployment
+
+- Include dual_port_ram.v in your synthesizable project.
+
+- Connect module ports to the appropriate top-level logic as per system requirements.
 
 ## Project Structure
+text
 
-dual_port_ram.v – Parameterized dual-port RAM module.
+.
 
-test_bench.v – Testbench for simulation and verification.
+├── dual_port_ram.v                       # Parameterized dual-port RAM module 
+
+├── test_bench.v                          # Testbench for simulation and verification
+
+├── dual_port_ram_diagram.png             # Block diagram image
+
+├── simulation_waveform.png               # Waveform from simulation
+
+├── ram_architecture.png                  # Architecture illustration
+
+└── README.md                             # Project documentation
 
 ## Example Operation
+- The testbench writes sequential values (1–16) into the RAM.
 
-The testbench writes values 1 to 16 into the RAM.
+- Values are read back simultaneously from both ports to demonstrate independent, parallel access.
 
-Values are then read back simultaneously from both ports, demonstrating independent access.
+Benefits
+- Highly flexible and reusable module with configurable parameters
 
-## Benefits
+- Demonstrates industry-standard dual-port memory access for parallel read/write
 
-Flexible, reusable design with configurable parameters.
+- Suitable for teaching, prototype FPGA projects, and real-world digital system designs.
 
-Demonstrates dual-port memory access for parallel data operations.
+## Contributing
+- Contributions and suggestions are welcome!
+- Feel free to submit issues or pull requests for improvements.
 
-Suitable for educational projects, FPGA-based memory design, and digital system prototypes.
-
-## Author
-
+## Author & Contact
 Shubham Yadav
-
-For any questions or support, please feel free to contact the author.
+For support or questions, please open an issue on this repository or contact via GitHub.
