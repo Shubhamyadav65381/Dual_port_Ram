@@ -58,7 +58,7 @@ Synthesis Tools Supported: Xilinx Vivado, ModelSim, Icarus Verilog
 - Compile
 
 bash
-- iverilog dual_port_ram.v test_bench.v -o ram_tb
+- verilog dual_port_ram.v test_bench.v -o ram_tb
 - Run the Testbench
 
 bash
